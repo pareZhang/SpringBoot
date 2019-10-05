@@ -11,7 +11,8 @@
     <groupId>com.zjm</groupId>
     <artifactId>springboot-quickstart</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springboot-quickstart</name>
+    <name>springboot-quickStart</name>
+
     <description>Quick start for Spring Boot</description>
 
     <properties>
