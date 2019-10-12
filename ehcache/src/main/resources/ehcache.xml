@@ -1,0 +1,38 @@
+<ehcache>
+
+    <!--  磁盘存储:将缓存中暂时不使用的对象,转移到硬盘,类似于Windows系统的虚拟内存
+        path:指定在硬盘上存储对象的路径
+      -->
+    <diskStore path="java.io.tmpdir/cache"/>
+
+    <!--
+        defaultCache:默认的缓存配置信息,如果不加特殊说明,则所有对象按照此配置项处理
+         maxElementsInMemory:设置了缓存的上限,最多存储多少个记录对象
+         eternal:代表对象是否永不过期
+         timeToIdleSeconds:最大的发呆时间
+         timeToLiveSeconds:最大的存活时间
+         overflowToDisk:是否允许对象被写入到磁盘
+         diskPersistent： 是否在磁盘上持久化。指重启jvm后，数据是否有效。默认为false。
+         diskExpiryThreadIntervalSeconds： 对象检测线程运行时间间隔。标识对象状态的线程多长时间运行一次。
+         diskSpoolBufferSizeMB： DiskStore使用的磁盘大小，默认值30MB。每个cache使用各自的DiskStore。
+　       memoryStoreEvictionPolicy： 如果内存中数据超过内存限制，向磁盘缓存时的策略。默认值LRU，可选FIFO、LFU。
+          -->
+    <defaultCache
+            maxElementsInMemory="10000"
+            eternal="false"
+            timeToIdleSeconds="120"
+            timeToLiveSeconds="120"
+            overflowToDisk="false"
+            diskPersistent="false"
+            diskExpiryThreadIntervalSeconds="120"
+    />
+    <cache name="book_cache"
+           maxElementsInMemory="10000"
+           eternal="true"
+           timeToIdleSeconds="120"
+           timeToLiveSeconds="120"
+           overflowToDisk="true"
+           diskPersistent="true"
+           diskExpiryThreadIntervalSeconds="600"
+    />
+</ehcache>
