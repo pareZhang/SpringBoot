@@ -2,7 +2,6 @@ package com.zjm;
 
 import com.zjm.bean.Message;
 import com.zjm.component.JmsComponent;
-import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
