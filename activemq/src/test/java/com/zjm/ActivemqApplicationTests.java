@@ -19,5 +19,4 @@ class ActivemqApplicationTests {
         msg.setDate(new Date());
         jmsComponent.send(msg);
     }
-
 }

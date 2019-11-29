@@ -19,7 +19,7 @@ public class JmsComponent {
     public void send(Message msg){
         messagingTemplate.convertAndSend(this.queue,msg);
     }
-    @JmsListener(destination = "amq")
+    @JmsListener(destination = "amq")//@JmsListener注解表示这个方法是一个消息消费者，消息订阅者订阅的消息destination为amq
     public void receive(Message msg){
         System.out.println("receive:"+msg);
     }
