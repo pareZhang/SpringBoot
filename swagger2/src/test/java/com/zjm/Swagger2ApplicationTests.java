@@ -12,6 +12,7 @@ class Swagger2ApplicationTests {
 
 	@Test
 	void contextLoads() {
+		publicsdc dwed 
 	}
 
 }
